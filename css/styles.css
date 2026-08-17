@@ -590,20 +590,16 @@ p {
 .founder-photo {
   width: 96px;
   height: 96px;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   border: 1px solid var(--brass);
   background: var(--bg-elev-2);
-  color: var(--brass);
-  font-family: var(--mono);
-  font-size: 28px;
-  letter-spacing: 0.08em;
 }
 
 .founder-photo img {
   width: 96px;
   height: 96px;
   object-fit: cover;
+  object-position: center top;
 }
 
 .founder p {
@@ -640,6 +636,7 @@ p {
   display: block;
   background: #000;
   aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 
 .contact-form,
