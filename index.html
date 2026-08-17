@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#050a12" />
+    <title>OrderFlow — Turn purchase orders into validated ERP orders</title>
+    <meta
+      name="description"
+      content="OrderFlow extracts customer purchase orders from email and PDF, validates them against your ERP, and routes discrepancies for human approval before anything is created."
+    />
+    <link rel="canonical" href="https://orderflow-erp.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://orderflow-erp.com/" />
+    <meta property="og:title" content="OrderFlow — Turn purchase orders into validated ERP orders" />
+    <meta
+      property="og:description"
+      content="Order-entry automation for manufacturers. Extract PO data, check it against your ERP, and keep a person in control before the sales order is created."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="OrderFlow — Turn purchase orders into validated ERP orders" />
+    <meta
+      name="twitter:description"
+      content="Stop re-keying customer PO data into your ERP. Extract, validate, and approve before submission."
+    />
+    <link rel="icon" href="assets/OrderFlowIcon_Transparent.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/OrderFlowIcon_Transparent.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img class="brand-icon" src="assets/OrderFlowIcon_Transparent.png" alt="" width="40" height="40" />
+        <span>
+          <strong>OrderFlow</strong>
+          <em>Order-entry automation</em>
+        </span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="Primary">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#security">Security</a>
+        <a href="#demo">Demo</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary nav-cta" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20demo">Book a Demo</a>
+      </nav>
+      <div class="topbar-actions">
+        <a class="btn btn-primary topbar-cta" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20demo">Book a Demo</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="wrap hero-copy">
+          <img class="hero-logo" src="assets/OrderFlowLogo_Transparent.png" alt="OrderFlow" width="360" />
+          <p class="eyebrow">Order-entry automation for manufacturers</p>
+          <h1>Turn customer purchase orders into validated ERP orders — without manual re-entry.</h1>
+          <p class="hero-lead">
+            OrderFlow extracts order data, checks it against your ERP, flags discrepancies, and routes
+            the order for human approval.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#demo">Watch Demo</a>
+            <a class="btn" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20demo">Book a 15-Minute Demo</a>
+          </div>
+          <p class="hero-local">Based in York, Pennsylvania</p>
+        </div>
+      </section>
+
+      <section class="section" id="demo">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">See the workflow</p>
+            <h2>PO arrives. Data is extracted. Exceptions are flagged. You approve. The order is created.</h2>
+            <p>
+              This is the Keystone Equipment purchase order from the OrderFlow demo — the same price
+              mismatch a customer service team would otherwise catch by hand.
+            </p>
+          </div>
+
+          <!--
+            VIDEO SLOT: replace the product-frame below with a 60–90s clip, e.g.
+
+            <video class="demo-video" controls poster="assets/demo-poster.jpg">
+              <source src="assets/demo.mp4" type="video/mp4" />
+            </video>
+
+            or a YouTube iframe. Keep it inside .product-frame so the layout stays the same.
+          -->
+          <div class="product-frame">
+            <div class="product-chrome">
+              <a class="brand" href="#demo" tabindex="-1">
+                <img class="brand-icon" src="assets/OrderFlowIcon_Transparent.png" alt="" width="40" height="40" />
+                <span>
+                  <strong>OrderFlow</strong>
+                  <em>Incoming orders</em>
+                </span>
+              </a>
+              <div class="product-chrome-meta">
+                <span class="dot"></span>
+                <span class="chrome-status">ERP connected</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="flow">
+                <div class="flow-step">
+                  <span class="flow-num">1</span>
+                  <div>
+                    <strong>PO arrives</strong>
+                    <span class="mono">KE-49192.pdf</span>
+                    <span>Keystone Equipment Company</span>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-num">2</span>
+                  <div>
+                    <strong>Data extracted</strong>
+                    <span>Customer, PO, part, qty, price, dates</span>
+                    <span class="mono">BRKT-442 · Qty 125 · $18.42</span>
+                  </div>
+                </div>
+                <div class="flow-step is-flag">
+                  <span class="flow-num">3</span>
+                  <div>
+                    <strong>Discrepancy found</strong>
+                    <span class="badge badge-warn">Price mismatch</span>
+                    <span>ERP contract price is $19.02 — $75.00 difference</span>
+                  </div>
+                </div>
+                <div class="flow-step">
+                  <span class="flow-num">4</span>
+                  <div>
+                    <strong>Human approval</strong>
+                    <span>Exception routed to an employee</span>
+                    <span>Nothing written to the ERP yet</span>
+                  </div>
+                </div>
+                <div class="flow-step is-ok">
+                  <span class="flow-num">5</span>
+                  <div>
+                    <strong>Order created</strong>
+                    <span>Approved sales order sent to the ERP</span>
+                    <span class="mono">SO-104892</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">The problem</p>
+            <h2>Still entering customer POs manually?</h2>
+            <p>
+              Most manufacturers still re-key purchase orders from email and PDF into the ERP, then
+              check the same fields a second time.
+            </p>
+          </div>
+          <div class="pain-grid">
+            <article class="pain-card">
+              <h3>Retyping customer order information</h3>
+              <p>Customer, PO number, ship-to, and line items get keyed in from a PDF or forwarded email.</p>
+            </article>
+            <article class="pain-card">
+              <h3>Checking pricing by hand</h3>
+              <p>Someone compares the customer PO price to the contract or price list in the ERP.</p>
+            </article>
+            <article class="pain-card">
+              <h3>Matching part numbers</h3>
+              <p>Customer part numbers, descriptions, and revisions have to be reconciled with yours.</p>
+            </article>
+            <article class="pain-card">
+              <h3>Spotting duplicate POs</h3>
+              <p>The same purchase order can arrive twice — and create a second sales order if nobody catches it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">How it works</p>
+            <h2>From customer PO to ERP sales order — with a person on the exceptions.</h2>
+          </div>
+          <div class="how-grid">
+            <article class="how-card">
+              <span class="flow-num">1</span>
+              <h3>Receive</h3>
+              <p>Customer sends a PO by email or PDF.</p>
+            </article>
+            <article class="how-card">
+              <span class="flow-num">2</span>
+              <h3>Extract</h3>
+              <p>OrderFlow reads customer, PO, part, quantity, price, and dates.</p>
+            </article>
+            <article class="how-card">
+              <span class="flow-num">3</span>
+              <h3>Validate</h3>
+              <p>Data is checked against ERP records.</p>
+            </article>
+            <article class="how-card">
+              <span class="flow-num">4</span>
+              <h3>Review</h3>
+              <p>Exceptions are flagged for human approval.</p>
+            </article>
+            <article class="how-card">
+              <span class="flow-num">5</span>
+              <h3>Create</h3>
+              <p>Approved orders are sent to the ERP.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="discrepancy">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Exceptions, not guesswork</p>
+            <h2>Show the discrepancy. Let a person decide.</h2>
+            <p>
+              When the customer PO does not match ERP pricing, OrderFlow puts the numbers next to each
+              other and waits for an employee.
+            </p>
+          </div>
+          <div class="panel wow">
+            <h3>Price mismatch detected</h3>
+            <p class="muted">
+              <span class="mono">BRKT-442</span> on purchase order
+              <span class="mono">KE-49192</span> does not match the ERP contract price.
+            </p>
+            <div class="metric-row">
+              <div class="metric">
+                <span>PO Price</span>
+                <strong>$18.42</strong>
+              </div>
+              <div class="metric">
+                <span>ERP Price</span>
+                <strong>$19.02</strong>
+              </div>
+              <div class="metric">
+                <span>Difference</span>
+                <strong>$75.00</strong>
+              </div>
+            </div>
+            <div class="mismatch-actions" aria-hidden="true">
+              <span class="btn btn-primary">Approve Override</span>
+              <span class="btn">Update Order</span>
+              <span class="btn btn-danger">Reject</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="security">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Human in control</p>
+            <h2>Human approval before ERP submission</h2>
+          </div>
+          <div class="safety-panel">
+            <div>
+              <p>
+                OrderFlow doesn’t blindly trust extracted data. It validates customer and order
+                information against existing systems and routes discrepancies to an employee before
+                anything is created.
+              </p>
+              <p class="muted" style="margin-top: 16px">
+                Developed by an enterprise software engineer focused on ERP and manufacturing workflow
+                automation.
+              </p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20demo">Book a Demo</a>
+                <a class="btn" href="mailto:mmayne@orderflow-erp.com">Email Mark</a>
+              </div>
+            </div>
+            <div class="card">
+              <p class="eyebrow">Built for real manufacturing workflows</p>
+              <div class="trust-grid">
+                <div class="trust-item"><span class="mark">✓</span><span>ERP validation</span></div>
+                <div class="trust-item"><span class="mark">✓</span><span>Human approval</span></div>
+                <div class="trust-item"><span class="mark">✓</span><span>Audit trail</span></div>
+                <div class="trust-item"><span class="mark">✓</span><span>Configurable business rules</span></div>
+                <div class="trust-item"><span class="mark">✓</span><span>API-based integration</span></div>
+                <div class="trust-item"><span class="mark">✓</span><span>Document processing</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="erp">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">ERP integrations</p>
+            <h2>Designed to integrate with existing ERP workflows</h2>
+            <p>
+              OrderFlow is designed around a connector architecture so it can integrate with modern ERP
+              APIs and existing business systems.
+            </p>
+          </div>
+          <div class="erp-grid">
+            <div class="erp-item">Epicor</div>
+            <div class="erp-item">Acumatica</div>
+            <div class="erp-item">NetSuite</div>
+            <div class="erp-item">Dynamics</div>
+            <div class="erp-item">Custom ERP / API</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="benefits">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">What changes</p>
+            <h2>Less re-keying. Fewer surprises. A record of every decision.</h2>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <h3>Faster Order Processing</h3>
+              <p>Reduce repetitive entry and verification.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Fewer Errors</h3>
+              <p>Catch pricing, part, quantity, and duplicate-order issues before submission.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Less Repetitive Work</h3>
+              <p>Let employees review exceptions instead of retyping every order.</p>
+            </article>
+            <article class="benefit-card">
+              <h3>Better Visibility</h3>
+              <p>Maintain an audit trail of extraction, validation, changes, and approval.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="founder">
+        <div class="wrap founder">
+          <!-- Drop a photo in as assets/mark.jpg and replace the initials span with:
+               <img src="assets/mark.jpg" alt="Mark Mayne" width="96" height="96" />
+          -->
+          <div class="founder-photo" aria-hidden="true">MM</div>
+          <div>
+            <p class="eyebrow">York, Pennsylvania</p>
+            <h2>Built locally for manufacturers</h2>
+            <p>
+              I'm Mark, a software developer based in the York, PA area. I built OrderFlow around a
+              simple problem: manufacturers still spend too much time manually moving customer order
+              information from PDFs and emails into business systems.
+            </p>
+            <p>
+              Helping manufacturers in South Central Pennsylvania automate repetitive order-entry
+              workflows.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="mailto:mmayne@orderflow-erp.com">Email Mark</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pilot">
+        <div class="wrap">
+          <div class="pilot">
+            <p class="eyebrow">Early customers</p>
+            <h2>Looking for founding manufacturing partners</h2>
+            <p>
+              We're currently working with a small number of manufacturers to test OrderFlow against
+              real order-entry workflows.
+            </p>
+            <a class="btn btn-primary" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20pilot">Discuss a Pilot</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="wrap contact-layout">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>See if OrderFlow fits your workflow</h2>
+            <p class="muted" style="margin-top: 12px">
+              Tell me how customer orders arrive today. I’ll follow up by email — no long intake form.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:mmayne@orderflow-erp.com?subject=OrderFlow%20demo">Book a Demo</a>
+              <a class="btn" href="mailto:mmayne@orderflow-erp.com">Email Mark</a>
+            </div>
+          </div>
+
+          <div class="contact-panel">
+          <form class="contact-form" action="https://formsubmit.co/mmayne@orderflow-erp.com" method="POST">
+            <input type="hidden" name="_subject" value="OrderFlow site inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="honey" aria-hidden="true">
+              <label for="company-url">Company URL</label>
+              <input id="company-url" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="erp">ERP</label>
+              <input id="erp" name="erp" type="text" placeholder="Epicor, Acumatica, NetSuite, Dynamics, other" />
+            </div>
+            <div class="field">
+              <label for="ordersArrive">How do customer orders arrive?</label>
+              <textarea id="ordersArrive" name="ordersArrive" rows="3" placeholder="Email, PDF, portal, EDI…"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+
+          <div class="form-success" hidden tabindex="-1">
+            <h3>Thanks — I’ll get back to you.</h3>
+            <p class="muted" style="margin-top: 8px">
+              If you need to add anything, email
+              <a href="mailto:mmayne@orderflow-erp.com">mmayne@orderflow-erp.com</a>.
+            </p>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <div>
+          <img class="footer-logo" src="assets/OrderFlowLogo_Transparent.png" alt="OrderFlow" width="160" />
+          <p>
+            York, Pennsylvania
+            · <a href="mailto:mmayne@orderflow-erp.com">mmayne@orderflow-erp.com</a>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#demo">Demo</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
